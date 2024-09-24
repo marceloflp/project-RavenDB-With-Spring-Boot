@@ -45,7 +45,7 @@ public class ServicoController {
 		return ResponseEntity.ok(servicos);
 	}
 
-	@PutMapping("/update{id}")
+	@PutMapping("/update/{id}")
 	public ResponseEntity<Servico> update(@PathVariable String id, @RequestBody Servico servico) {
 		servico.setId(id);
 		servicoService.update(servico);

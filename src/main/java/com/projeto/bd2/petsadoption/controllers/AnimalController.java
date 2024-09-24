@@ -45,7 +45,7 @@ public class AnimalController {
 		return ResponseEntity.ok(animais);
 	}
 
-	@PutMapping("/update{id}")
+	@PutMapping("/update/{id}")
 	public ResponseEntity<Animal> update(@PathVariable String id, @RequestBody Animal animal) {
 		animal.setId(id);
 		animalService.update(animal);
